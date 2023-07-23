@@ -1,0 +1,29 @@
+.container {
+    margin: auto;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 46rem;
+    /* border: 1px solid #ccc;
+    height: 400px; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: var(--color-blue);
+    font-weight: bold;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.header p > span{
+    color: var(--base-gray-100);
+    padding: 2px 8px;
+    border-radius: 999px;
+    background-color: var(--base-gray-400);
+
+}
+
+
+

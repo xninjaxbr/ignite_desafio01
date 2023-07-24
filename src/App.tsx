@@ -18,18 +18,44 @@ export interface Itask{
   const hadtask = tasks.length == 0  
 
   function handleNewTask(newtask : Itask) {
-    
-    console.log(newtask)
-    setTask( [...tasks, newtask])
-    console.log(newtask)
+     setTask( [...tasks, newtask])
       
+  }
+
+  function handleStatus(taskstatus : Itask){
+    const listWithNewStatus = tasks.filter(tasks => {
+      return tasks.id !== taskstatus.id
+    })
+
+    listWithNewStatus.push(taskstatus)
+
+    listWithNewStatus.sort((a,b) => {
+      if(a.status < b.status){
+        return -1
+      } else{
+        return 0
+      }
+    })
+
+    setTask(listWithNewStatus)
+
+  }
+
+  function handleDeleteTask(deleteTask : Itask){
+  
+    const listWithoutTask = tasks.filter(tasks => {
+      return tasks.id !== deleteTask.id
+    })
+
+    setTask(listWithoutTask)
+
   }
 
   return (
    <div >
     <Header />
     <NewTask handle={handleNewTask} />
-    <TasksContainer hadtask={hadtask} tasks={tasks}/>
+    <TasksContainer hadtask={hadtask} tasks={tasks} status={handleStatus} deleteTask={handleDeleteTask}/>
    </div>  
   )
 }

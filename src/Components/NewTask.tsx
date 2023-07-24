@@ -13,6 +13,7 @@ export function NewTask({handle}: INewTaskprops ) {
     const [idTask, setidtask] = useState(0)
     function handleSubmit(event: FormEvent){
         event.preventDefault()
+        if(inputtask != ''){
         handle({
             id: idTask + 1 ,
             status: false,
@@ -21,18 +22,20 @@ export function NewTask({handle}: INewTaskprops ) {
 
         setidtask(idTask +1)
         setinputtask('')
-        
+    }else{
+        alert('Campo obrigatório')
+    }
     }
 
     function handleChange(event: ChangeEvent<HTMLInputElement>){
         setinputtask(event.target.value);
     }
 
-    
+
 
     return (
         <form onSubmit={handleSubmit} className={style.main}>
-          <input className={style.taskInput} name='commit' onChange={handleChange} placeholder='Adicione uma nova tarefa' value={inputtask}/>
+          <input className={style.taskInput} onChange={handleChange}  placeholder='Adicione uma nova tarefa' required value={inputtask}/>
           <button type="submit" className={style.taskButton}>Criar <span className="material-symbols-outlined">
             add_circle
             </span></button>

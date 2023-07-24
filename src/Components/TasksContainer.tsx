@@ -18,15 +18,25 @@ import { Tasks } from './Tasks'
 // ]
 
 interface Itaskprops{
-    hadtask: boolean
-    tasks: Itask[]
+    hadtask: boolean,
+    tasks: Itask[],
+    status(tasks : Itask) : void,
+    deleteTask(deleteTask : Itask) :  void,
 }
 
 
-export function TasksContainer({hadtask, tasks}: Itaskprops){
+export function TasksContainer({hadtask, tasks, status ,  deleteTask } : Itaskprops){
     
      
+    function handleStatus(statusTask : Itask){
+        status(statusTask)
+    }
     
+
+    function handleDelete(Taskfordelete : Itask){
+        deleteTask(Taskfordelete)
+    }
+
 
 
     return (
@@ -35,7 +45,7 @@ export function TasksContainer({hadtask, tasks}: Itaskprops){
                 <p>Tarefa criada <span>0</span></p>
                 <p>Concluídas <span>0</span></p>
             </div>
-            <div className={style.main}>
+            <div >
                 { 
                     hadtask == true ? <Tasknotfound/> : tasks.map(task =>{
                     return <Tasks
@@ -43,6 +53,8 @@ export function TasksContainer({hadtask, tasks}: Itaskprops){
                                 id={task.id} 
                                 status={task.status} 
                                 task={task.task} 
+                                onChangeStatus={handleStatus}
+                                onDelete={handleDelete}
                             />
                     })
             

@@ -18,8 +18,18 @@ export interface Itask{
   const hadtask = tasks.length == 0  
 
   function handleNewTask(newtask : Itask) {
-     setTask( [...tasks, newtask])
-      
+    
+    const withNewTask = [...tasks, newtask]
+    
+    withNewTask.sort((a,b) => {
+      if(a.status < b.status){
+        return -1
+      } else{
+        return 0
+      }
+    })
+    
+    setTask(withNewTask)
   }
 
   function handleStatus(taskstatus : Itask){

@@ -27,23 +27,20 @@ interface Itaskprops{
 
 export function TasksContainer({hadtask, tasks, status ,  deleteTask } : Itaskprops){
     
-     
-    function handleStatus(statusTask : Itask){
-        status(statusTask)
-    }
     
+    const numberOfTasks = tasks.length
 
-    function handleDelete(Taskfordelete : Itask){
-        deleteTask(Taskfordelete)
-    }
+    const completeTasks = tasks.filter(tasks => {
+        return tasks.status === true
+    })
 
 
 
     return (
         <div className={style.container}>
             <div className={style.header}>
-                <p>Tarefa criada <span>0</span></p>
-                <p>Concluídas <span>0</span></p>
+                <p>Tarefa criada <span>{numberOfTasks}</span></p>
+                <p>Concluídas <span>{completeTasks.length}</span></p>
             </div>
             <div >
                 { 
@@ -53,8 +50,8 @@ export function TasksContainer({hadtask, tasks, status ,  deleteTask } : Itaskpr
                                 id={task.id} 
                                 status={task.status} 
                                 task={task.task} 
-                                onChangeStatus={handleStatus}
-                                onDelete={handleDelete}
+                                onChangeStatus={status}
+                                onDelete={deleteTask}
                             />
                     })
             

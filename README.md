@@ -1,8 +1,8 @@
-<h1 align="center"> DevLinks -Paulo Henrique </h1>
+<h1 align="center"> ToDo list -Paulo Henrique </h1>
 
 <p align="center">
-Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB. <br/>
-<a href="https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito">Estude esse projeto em formato de vídeo clicando aqui.</a>
+Desafio número 01 do modulo Ignite promovido pela Rocketseat <br/>
+<a href="https://www.rocketseat.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=lead&utm_term=perpetuo&utm_content=institucional-lead-home-texto-lead-brandkws-none-none-institucional-none-none-br-google&gclid=Cj0KCQjwiIOmBhDjARIsAP6YhSVOkUmTjdncykyC6YoWWYExafcXX-z-BmauUqN8HlbIKf__iCm6k3YaAglBEALw_wcB">Site da Rocketseat</a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/capa.jpg" width="100%">
+  <img src=".github/capa.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -30,18 +30,20 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - Git e Github
 - Figma
+- React Js 
+  => Hooks (useStage())
+  => Components 
+  => Components properties
 
 ## 💻 Projeto
 
-O DevLinks é um agregador de links para usar como cartão de visitas online.
+O desafio 01 é uma ToDo list, um programa de gerenciador de tarefas, onde você pode acrescentar, alterar o status e excluir tarafas que achar relevante. 
 
-- [Acesse o projeto finalizado, online](https://maykbrito.github.io/devlinks)
-
-- [Assistir aulas](https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito)
+- O projeto foi melhorado e acrescentado uma função para salvar no localStorage e seu progresso não seja perdido com a atualização de página.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/1qcifpWG5TgWx81fPXAUOE/ToDo-List-%E2%80%A2-Desafio-React-Copy?fuid=1189009741987769829). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 

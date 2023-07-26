@@ -2,7 +2,7 @@ import { Header } from './Components/Header'
 import { NewTask } from './Components/NewTask'
 import { TasksContainer } from './Components/TasksContainer'
 import './globals.css'
-import { useState } from 'react'
+import { useLocalStorage } from  'usehooks-ts'
 
 export interface Itask{
     
@@ -13,7 +13,9 @@ export interface Itask{
 
   export function App() {
     
-  const [tasks, setTask] = useState<Itask[]>([])
+
+  const [tasks, setTask] = useLocalStorage<Itask[]>('tasks', [])
+  
 
   const hadtask = tasks.length == 0  
 
